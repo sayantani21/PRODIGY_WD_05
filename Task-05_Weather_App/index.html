@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App — Task 05</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>SkyNow <span>Weather</span></h1>
+      <div class="controls">
+        <form id="searchForm" class="search" autocomplete="off">
+          <input id="cityInput" type="text" placeholder="Search city e.g. Kolkata" required/>
+          <button class="btn" aria-label="Search">Search</button>
+        </form>
+        <button id="locBtn" class="btn ghost" title="Use my location">📍</button>
+        <div class="units" role="group" aria-label="Units">
+          <label><input type="radio" name="unit" value="metric" checked> °C</label>
+          <label><input type="radio" name="unit" value="imperial"> °F</label>
+        </div>
+      </div>
+    </header>
+
+    <section id="result" class="card hidden" aria-live="polite">
+      <div class="head">
+        <div>
+          <h2 id="place">—</h2>
+          <p id="time">—</p>
+        </div>
+        <img id="icon" alt="icon" width="72" height="72"/>
+      </div>
+      <div class="grid">
+        <div class="big">
+          <div id="temp">—</div>
+          <div id="desc">—</div>
+        </div>
+        <ul class="facts">
+          <li>Feels like <span id="feels">—</span></li>
+          <li>Humidity <span id="hum">—</span></li>
+          <li>Wind <span id="wind">—</span></li>
+          <li>Pressure <span id="press">—</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <p id="msg" class="msg"></p>
+
+    <footer class="foot">
+      <small>Powered by <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer">OpenWeatherMap</a></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
